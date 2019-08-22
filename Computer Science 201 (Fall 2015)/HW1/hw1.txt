@@ -1,0 +1,83 @@
+#File: HW1 hw1.txt
+#Author: Caleb Massey
+#Date: 9/03/15
+#Section: 23
+#Description: Using psuedo code to solve problems using algoritms
+
+
+
+Question 1: 
+
+Take 7 and divide it by every number less than it that is greater than 1
+
+If 7 divided by all the numbers between 7 and 1 have remainders, 7 is prime
+
+If 7 divided by any number between 7 and 1 doesnt have a remainder, 7 is not prime
+
+
+
+Question 2
+
+Take Number and divide it by every number less than it that is greater than 1
+
+If Number divided by all the numbers between Number and 1 have remainders, Number is prime
+
+If Number divided by any number between Number and 1 doesnt have a remainder, Number is not prime 
+     
+
+
+Question 3
+
+Check the first and last letter to see if they match
+
+Continue with the second letter and second to last letter
+
+Continue this for the length of the word
+
+If all letters match the letters on the opposite side of the list:
+   
+	The word is a palindrome
+
+Else:
+   
+	The word is not a palindrome
+
+
+
+Question 4
+
+Take the top two card from the stack
+
+Compare the two cards and decide which one has the higher number
+
+Keep the highest number card and place the lower number card into a dicard stack
+
+Continue taking the top card from the stack and compare it with the high number card
+
+If the newly drawn card is higher than the high card keep new card as new high card and discard the old high card
+
+Else discard new card and keep same high card
+
+Continue this until all cards have been drawn from the stack. 
+
+The last highest card you have left should be the highest number card in the deck
+
+
+
+Question 5
+
+Input a Number
+
+Subtract 1 from the Number and make that new Number
+
+Multiply Number times (Number + 1) and make it equal Factorial
+
+Make new Number equal (Number - 1)
+
+While Number is greater than 0:
+      
+	Factorial equal old Factorial times Number
+      
+	Then new Number equals (Number - 1)
+
+Once the while loop ends Factorial is the factorial of the number you input

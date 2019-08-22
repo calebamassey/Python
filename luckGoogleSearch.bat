@@ -1,0 +1,1 @@
+@py.exe "C:/Code/Python/GitHub Repo/Python-master/luckyGoogleSearch.py" %*
