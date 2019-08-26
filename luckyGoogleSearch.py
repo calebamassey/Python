@@ -3,18 +3,23 @@
 
 import requests, sys, webbrowser, bs4
 
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
+
 print('Googling...') # display text while downloading the Google Page
-res = requests.get("https://www.google.com/search?q=" + ' '.join(sys.argv[1:]))
+res = requests.get("http://www.google.com/search?q=" + ' '.join(sys.argv[1:]), headers=headers)
 res.raise_for_status()
-#webbrowser.open("https://www.google.com/search?q=" + ' '.join(sys.argv[1:]))
-# Retrieve  top search result links.
+
+# Retrieve top search result links.
 soup = bs4.BeautifulSoup(res.text, "html.parser")
 
-# Open a browser tab for  each result.
-linkElems = soup.select('.r a')
-print(linkElems)
+linkElems = []
+
+for link in soup.find_all('div', {'class': 'r'}):
+    for url in link.find_all('a', {'class': False}):
+        linkElems.append((url.get('href')))
+        
 numOpen = min(5, len(linkElems))
-print (numOpen)
+
+# Open a browser tab for  each result
 for i in range(numOpen):
-    print(i)
-    webbrowser.open(linkElems[i].get('href'))
+    webbrowser.open(linkElems[i])
