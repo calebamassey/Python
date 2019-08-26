@@ -1,1 +1,1 @@
-@py.exe "C:/Code/Python/GitHub Repo/Python-master/luckyGoogleSearch.py" %*
+@py.exe "C:/Code/Python/luckyGoogleSearch.py" %*
