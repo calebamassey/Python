@@ -7,7 +7,7 @@ sheet = wb.active
 for i in range(1,11): # Create some data in column A
     sheet['A' + str(i)] = i
 
-refObj = Reference(sheet, min_col=1, min_row=1, max_col=10, max_row=1)
+refObj = Reference(sheet, min_col=1, min_row=1, max_col=1, max_row=10)
 
 seriesObj = Series(refObj, title='First Series')
 
